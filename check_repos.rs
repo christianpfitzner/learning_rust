@@ -42,10 +42,9 @@ for path in files {
     // if this is the case, these folders are repositories
 
 
-
+    let appending_thing = Path::new("/.git");
     // append .git/ for the git folder
-    let mut p = PathBuf::from(path);
-    let git_folder_in_dir = p.push("/.git/");
+    let dgit_folder_in_dir = path.unwrap().path().join(&appending_thing); 
 
 
 }
