@@ -35,17 +35,19 @@ println!("{}", git_folder.display());
 let files = fs::read_dir(git_folder).unwrap();
 
 for path in files {
-    println!("Name: {}", path.unwrap().path().display()); 
+    // println!("Name: {}", path.unwrap().path().display()); 
 
  
     // check if the found folders contain a .git folder
     // if this is the case, these folders are repositories
-
+    let  p = path; 
 
     let appending_thing = Path::new("/.git");
     // append .git/ for the git folder
-    let dgit_folder_in_dir = path.unwrap().path().join(&appending_thing); 
+    // let git_folder_in_dir = p.unwrap().path().join(appending_thing); 
+    let git_folder_in_dir = [path, appending_thing].concat(); 
 
+    println!("Name: {}", git_folder_in_dir.display()); 
 
 }
 
