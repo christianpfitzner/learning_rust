@@ -1,0 +1,10 @@
+[package]
+name = "check_git_repos"
+version = "0.1.0"
+authors = ["Christian Pfitzner <christian.pfitzner@t-online.de>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
